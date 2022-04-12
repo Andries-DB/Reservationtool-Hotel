@@ -16,9 +16,7 @@ return new class extends Migration
         Schema::create('seasonal_prices', function (Blueprint $table) {
             $table->id();
             $table->float('price_factor');
-            $table->dateTime('date_start');
-            $table->dateTime('date_end');
-
+            $table->timestamps();
         });
     }
 

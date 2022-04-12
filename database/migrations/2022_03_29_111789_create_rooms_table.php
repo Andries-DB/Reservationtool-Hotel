@@ -24,7 +24,8 @@ return new class extends Migration
             $table->boolean('has_balcony');
             $table->boolean('has_shower');
             $table->boolean('has_bath');
-
+            $table->timestamps();
+            $table->date('deleted_at')->nullable();
         });
     }
 

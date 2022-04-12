@@ -15,14 +15,13 @@ return new class extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('adress_id')->constrained();
+            $table->foreignId('adress_id');
             $table->string('title');
             $table->string('firstname');
             $table->string('lastname');
             $table->string('email')->unique();
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
-            $table->timestamp('deleted_at');
+            $table->timestamps();
+            $table->date('deleted_at')->nullable();
         });
     }
 

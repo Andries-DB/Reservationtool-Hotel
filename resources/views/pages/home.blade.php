@@ -16,9 +16,9 @@
     <div class="row">
       <nav class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu="tckp8q-dropdown-menu" role="menubar">
-          <li role="menuitem"><a href="./home.html">Home</a></li>
-          <li role="menuitem"><a href="./clients.html">Klanten</a></li>
-          <li role="menuitem"><a href="./reservations.html">Reservaties</a></li>
+          <li role="menuitem"><a href="./welcome">Home</a></li>
+          <li role="menuitem"><a href="./clients">Klanten</a></li>
+          <li role="menuitem"><a href="./reservations">Reservaties</a></li>
         </ul>
         @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
