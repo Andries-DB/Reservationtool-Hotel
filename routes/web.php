@@ -18,8 +18,8 @@ use App\Http\Controllers\Home;
 
 // login
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+    return view('pages/home');
+})->middleware(['auth'])->name('home');
 require __DIR__.'/auth.php';
 
 

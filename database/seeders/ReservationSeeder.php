@@ -20,8 +20,8 @@ class ReservationSeeder extends Seeder
         for ($i = 0; $i < 100; $i++) {
             Reservation::create([
                 'user_id' => $faker->randomDigitNot(0,2,3,4,5,6,7,8,9),
-                'client_id' => $faker->numberBetween(0, 100),
-                'room_id' => $faker->numberBetween(0, 100),
+                'client_id' => $faker->numberBetween(1, 100),
+                'room_id' => $faker->numberBetween(1, 100),
                 'seasonal_price_id' => $faker->numberBetween(0, 100),
                 'remarks' => $faker->text,
                 'price' => $faker->randomFloat(2, 100, 130),

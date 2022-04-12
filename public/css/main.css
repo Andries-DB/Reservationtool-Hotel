@@ -1,4 +1,7 @@
-@charset "UTF-8";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 /**
  * Foundation for Sites by ZURB
  * Version 6.3.0
@@ -1395,7 +1398,9 @@ dl {
   line-height: 1.6; }
 
 li {
-  font-size: inherit; }
+  font-size: inherit;
+   text-decoration: none;
+    }
 
 ul {
   margin-left: 1.25rem;

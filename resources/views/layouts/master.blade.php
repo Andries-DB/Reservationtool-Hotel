@@ -7,7 +7,7 @@
     <title>Chateau Meiland</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href=" {{ mix('css/app.css') }}">
     <meta class="foundation-mq">
 </head>
 

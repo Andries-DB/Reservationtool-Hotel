@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('province');
             $table->string('country_code');
             $table->timestamps();
+            $table->date('deleted_at')->nullable();
         });
     }
 

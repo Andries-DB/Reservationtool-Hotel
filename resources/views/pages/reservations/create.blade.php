@@ -1,11 +1,11 @@
-@extends('layout.master')
+@extends('layouts.master')
 
 @section('content')
 
 
     <div class="row">
         <div class="medium-12 large-12 columns">
-            <h4>@lang('app.reservations.create.title')</h4>
+            <h4>@lang('Create a new reservation')</h4>
             @if ($errors->any())
                 <div class="callout alert">
                     <ul>
@@ -19,9 +19,9 @@
             <div class="medium-2  columns"><b>{{ $client->full_name }}</b></div>
             <form action="" method="GET">
                 <div class="medium-1  columns">Van:</div>
-                <div class="medium-2  columns"><input name="start_date" value="{{ $start_date }}" type="date" class="datepicker" /></div>
+                <div class="medium-2  columns"><input name="date_start" value="{{ $client->date_start }}" type="date" class="datepicker" /></div>
                 <div class="medium-1  columns">Tot:</div>
-                <div class="medium-2  columns"><input name="end_date" value="{{ $end_date }}" type="date" class="datepicker" /></div>
+                <div class="medium-2  columns"><input name="date_end" value="{{ $client->date_end }}" type="date" class="datepicker" /></div>
                 <div class="medium-2  columns"><input class="button" type="submit" value="ZOEK" /></div>
             </form>
 
