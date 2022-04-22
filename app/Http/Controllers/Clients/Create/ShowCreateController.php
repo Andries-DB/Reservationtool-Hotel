@@ -16,6 +16,7 @@ class ShowCreateController extends Controller
      */
     public function __invoke(Request $request)
     {
+        // Showing updated table of clients.
         return view('pages.clients.create');
     }
 }

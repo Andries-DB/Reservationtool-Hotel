@@ -20,32 +20,28 @@ class ShowCreateController extends Controller
      */
     public function __invoke(Request $request, Client $client)
     {
-        $validator = Validator::make(request()->all(), [
-            'start_date' => 'nullable|date',
-            'end_date' => 'nullable|date|after:start_date',
-        ]);
 
-        $start = $request->start_date;
-        $end = $request->end_date;
+        $r_date_start = $request->date_start;
+        $r_date_end = $request->date_end;
 
         $rooms = [];
         $reserved_rooms = [];
-        if (!$validator->fails() && $start && $end) {
-            $reserved_rooms = Reservation::whereBetween('start_date', [$start, $end])
-                            ->orWhereBetween('end_date', [$start, $end])
-                            ->orWhere(function($query) use ($start, $end) {
-                                $query->where('start_date', '<', $start)->where('end_date', '>', $end);
+        if ($r_date_start && $r_date_end) {
+            $reserved_rooms = Reservation::whereBetween('date_start', [$r_date_start, $r_date_end])
+                            ->orWhereBetween('date_end', [$r_date_start, $r_date_end])
+                            ->orWhere(function($query) use ($r_date_start, $r_date_end) {
+                                $query->where('date_start', '<', $r_date_start)->where('date_end', '>', $r_date_end);
                             })->pluck('room_id')->toArray();
 
-            $rooms = Room::orderBy('number')->get();
+            $rooms = Room::orderBy('id')->get();
         }
 
         return view('pages.reservations.create', [
             'client' => $client,
             'rooms' => $rooms,
             'reserved_rooms' => $reserved_rooms,
-            'start_date' => $start,
-            'end_date' => $end,
-        ])->withErrors($validator);
+            'start_date' => $r_date_start,
+            'end_date' => $r_date_end,
+        ]);
     }
 }

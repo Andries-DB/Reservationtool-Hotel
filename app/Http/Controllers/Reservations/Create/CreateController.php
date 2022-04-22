@@ -18,11 +18,13 @@ class CreateController extends Controller
      */
     public function __invoke(ReservationRequest $request)
     {
-        // in principe zou je hier ook moeten checken of de kamer niet geboekt is
+        // Making new reservation with given information
         $reservation = Reservation::create($request->all());
 
+        // Sending a mail to clients mail with confirmation
         Mail::to($reservation->client->email)->queue(new ReservationCreated($reservation));
 
+        // Returning to updated reservations table
         return redirect()->route('reservations');
     }
 }

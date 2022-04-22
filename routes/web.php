@@ -22,12 +22,15 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('home');
 require __DIR__.'/auth.php';
 
-
+Route::get('/' , function() {
+    return view('pages/home');
+});
 Route::prefix('home')
         ->name('home')
         ->group(function() {
             Route::get('/', Home\HomeController::class);
 });
+
 
 Route::prefix('clients')
         ->name('clients')

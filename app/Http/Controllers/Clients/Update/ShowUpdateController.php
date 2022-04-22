@@ -17,6 +17,7 @@ class ShowUpdateController extends Controller
      */
     public function __invoke(Request $request, Client $client)
     {
+        // Showing the updated table of the clients
         return view('pages.clients.update', [
             'client' => $client,
         ]);

@@ -1,0 +1,89 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    margin: 0 50px 0 50px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fefefe;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #0a0a0a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.top-bar {
+    padding: 20px;
+    background-color: rgb(182, 209, 129);
+}
+
+.top-bar a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.new-client {
+    background-color: rgb(131, 131, 72);
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+
+}
+
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(182, 209, 129);
+}
+tr:nth-child(odd) {
+    background-color: rgb(213, 236, 158);
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+.client-action {
+    color: black;
+    text-decoration: none;
+}
+
+.client-action:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.button-delete {
+    border: none;
+    background-color: rgb(182, 36, 36);
+    padding: 5px 10px 5px 10px;
+    color: white;
+}
+.button-delete:hover {
+    border: none;
+    background-color: rgb(224, 50, 50);
+    padding: 5px 10px 5px 10px;
+    color: black;
+}

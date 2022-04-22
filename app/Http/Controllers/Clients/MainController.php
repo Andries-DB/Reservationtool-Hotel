@@ -16,8 +16,10 @@ class MainController extends Controller
      */
     public function __invoke(Request $request)
     {
+        // Getting all the clients out of the database
         $clients = Client::all();
 
+        // returning specific view with the clients
         return view('pages.clients.index', [
             'clients' => $clients,
         ]);

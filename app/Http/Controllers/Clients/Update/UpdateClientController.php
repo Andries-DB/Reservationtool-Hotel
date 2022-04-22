@@ -19,11 +19,11 @@ class UpdateClientController extends Controller
      */
     public function __invoke(ClientRequest $request, Client $client)
     {
-        // update client
+        // Update specific client
         $client->fill($request->all());
         $client->save();
 
-        // redirect to show clients
+        // Redirecting to clients table
         return redirect()->route('clients');
     }
 }

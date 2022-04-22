@@ -1,21 +1,25 @@
 <!-- Start Top Bar -->
-<div class="top-bar">
-    <div class="row">
-        <div class="top-bar-left">
-            <ul class="dropdown menu" data-dropdown-menu="tckp8q-dropdown-menu" role="menubar">
+<div class="p-10 bg-green-300">
+    <div>
+        <div>
+            <ul>
                 @if (Route::has('login'))
-                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                 <div class="top-0 sm:block">
                 @auth
                     @foreach(['home', 'clients', 'reservations'] as $route)
-                    <a href="{{ route($route) }}">@lang($route)</a>
+                    <a class="  text-l text-black hover:underline uppercase pl-20" href="{{ route($route) }}">@lang($route)</a>
                 @endforeach
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button class="text-l text-black hover:underline uppercase pl-20" type="submit">Logout</button>
+                    </form>
                 @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                    <a href="{{ route('login') }}" class="text-l text-black hover:underline uppercase pl-20">Log in</a>
                     @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                        <a href="{{ route('register') }}" class=" text-l text-black hover:underline uppercase pl-20">Register</a>
                     @endif
-                    @foreach(['home', 'clients'] as $route)
-                        <a href="{{ route($route) }}">@lang($route)</a>
+                    @foreach(['home'] as $route)
+                        <a class="text-l text-black hover:underline uppercase pl-20" href="{{ route($route) }}">@lang($route)</a>
                 @endforeach
                 @endauth
             </div>
