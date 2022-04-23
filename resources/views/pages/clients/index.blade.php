@@ -8,7 +8,7 @@
             <h4 class="text-4xl mb-3">@lang('Clients')</h4>
             <br>
             <div class="medium-2  columns">
-                <a class="bg-green-300 text-black px-10 py-5 mt-8  rounded-xl hover:bg-green-500 hover:text-white" href="{{ route('clients.create') }}">@lang('Add a new client')</a>
+                <a class="bg-green-300 text-black px-10 py-5 mt-8  rounded-xl hover:bg-green-500 hover:text-white" href="{{ route('clients.create') }}">Voeg nieuwe klant toe</a>
             </div>
             <br>
             <table>
