@@ -19,7 +19,7 @@
           <br>
           Na enkele jaren te hebben gezocht vonden wij dit prachtige familie landgoed. De centrale ligging en de rust
           om het kasteel was precies waar we naar op zoek waren.
-          TRYOUT
+          TRY
         </p>
       </article>
     </div>
