@@ -1,4 +1,3 @@
-<!-- Start Top Bar -->
 <div class="p-10 bg-green-300">
     <div>
         <div>
@@ -21,6 +20,7 @@
                     @foreach(['home'] as $route)
                         <a class="text-l text-black hover:underline uppercase pl-20" href="{{ route($route) }}">@lang($route)</a>
                 @endforeach
+                        <a class="text-l text-black hover:underline uppercase pl-20" href={{ "/reservations/create/1"}}>Make new Reservation</a>
                 @endauth
             </div>
         @endif
@@ -28,4 +28,3 @@
         </div>
     </div>
 </div>
-<!-- End Top Bar -->

@@ -31,7 +31,6 @@ Route::prefix('home')
             Route::get('/', Home\HomeController::class);
 });
 
-
 Route::prefix('clients')
         ->name('clients')
         ->group(function() {
